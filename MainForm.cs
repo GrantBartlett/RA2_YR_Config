@@ -47,7 +47,8 @@ namespace RA2_YR_Config
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            Save_Settings();
+            Save_Settings(RA2INI);
+            Save_Settings(RA2MDINI);
             Application.Exit();
         }
 
@@ -63,14 +64,13 @@ namespace RA2_YR_Config
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
-            Save_Settings();
+            Save_Settings(RA2INI);
+            Save_Settings(RA2MDINI);
         }
 
         private void Load_Settings()
         {
             Load_Settings_INI_Files();
-            ResolutionComboBox.Items.Clear();
-
             Load_Resolutions(cmbResolutionRA2, RA2INI);
             Load_Hotkey_Editor(HotkeyEditorDataGridRA2, GameHotkeysRA2, KeyboardINI);
             Load_Hotkey_Editor(HotkeyEditorDataGridYR, GameHotkeysYR, KeyboardMDINI);
@@ -94,7 +94,6 @@ namespace RA2_YR_Config
             chbShowToolTipsRA2.Checked = RA2INI.GetBoolValue("Options", "ToolTips", true);
             chbShowTargetLinesRA2.Checked = RA2INI.GetBoolValue("Options", "UnitActionLines", true);
 
-            chbEnableNoCDRA2.Checked = RA2INI.GetBoolValue("Options", "NoCD", true);
             chbShowHiddenObjectsRA2.Checked = RA2INI.GetBoolValue("Options", "ShowHidden", true);
             chbWindowedModeRA2.Checked = RA2INI.GetBoolValue("Video", "Windowed", false);
             chbUseGraphicsPatchRA2.Checked = RA2INI.GetBoolValue("Video", "UseGraphicsPatch", true);
@@ -126,36 +125,35 @@ namespace RA2_YR_Config
             }
         }
 
-        private void Save_Settings()
+        private void Save_Settings(IniFile game)
         {
             GameHotkeysRA2.Save_Hotkeys(KeyboardINI);
             GameHotkeysYR.Save_Hotkeys(KeyboardMDINI);
 
-            RA2INI.SetFloatValue("Audio", "VoiceVolume", ((double)trbrVoiceVolumeRA2.Value / 20));
-            RA2INI.SetFloatValue("Audio", "SoundVolume", ((double)trbrAudioVolumeRA2.Value / 20));
-            RA2INI.SetFloatValue("Audio", "ScoreVolume", ((double)trbrMusicVolumeRA2.Value / 20));
+            game.SetFloatValue("Audio", "VoiceVolume", ((double)trbrVoiceVolumeRA2.Value / 20));
+            game.SetFloatValue("Audio", "SoundVolume", ((double)trbrAudioVolumeRA2.Value / 20));
+            game.SetFloatValue("Audio", "ScoreVolume", ((double)trbrMusicVolumeRA2.Value / 20));
 
-            RA2INI.SetIntValue("Options", "ScrollRate", trbrScrollRateRA2.Value);
-            RA2INI.SetIntValue("Options", "DetailLevel", trbrDetailLevelRA2.Value);
+            game.SetIntValue("Options", "ScrollRate", trbrScrollRateRA2.Value);
+            game.SetIntValue("Options", "DetailLevel", trbrDetailLevelRA2.Value);
 
             var res = cmbResolutionRA2.SelectedItem.ToString().Split('x');
-            RA2INI.SetStringValue("Video", "ScreenWidth", res[0]);
-            RA2INI.SetStringValue("Video", "ScreenHeight", res[1]);
+            game.SetStringValue("Video", "ScreenWidth", res[0]);
+            game.SetStringValue("Video", "ScreenHeight", res[1]);
 
-            RA2INI.SetBoolValue("Video", "AllowVRAMSidebar", chbAllowVRAMSidebarRA2.Checked);
-            RA2INI.SetBoolValue("Video", "VideoBackBuffer", chbVideoBackBufferRA2.Checked);
+            game.SetBoolValue("Video", "AllowVRAMSidebar", chbAllowVRAMSidebarRA2.Checked);
+            game.SetBoolValue("Video", "VideoBackBuffer", chbVideoBackBufferRA2.Checked);
 
-            RA2INI.SetBoolValue("Options", "ToolTips", chbShowToolTipsRA2.Checked);
-            RA2INI.SetBoolValue("Options", "UnitActionLines", chbShowTargetLinesRA2.Checked);
+            game.SetBoolValue("Options", "ToolTips", chbShowToolTipsRA2.Checked);
+            game.SetBoolValue("Options", "UnitActionLines", chbShowTargetLinesRA2.Checked);
 
-            RA2INI.SetBoolValue("Options", "NoCD", chbEnableNoCDRA2.Checked);
-            RA2INI.SetBoolValue("Options", "ShowHidden", chbShowHiddenObjectsRA2.Checked);
-            RA2INI.SetBoolValue("Video", "Windowed", chbWindowedModeRA2.Checked);
-            RA2INI.SetBoolValue("Video", "UseGraphicsPatch", chbUseGraphicsPatchRA2.Checked);
-            RA2INI.SetBoolValue("Audio", "IsScoreRepeat", chbRepeatMusicRA2.Checked);
-            RA2INI.SetBoolValue("Audio", "IsScoreShuffle", chbShuffleMusicRA2.Checked);
+            game.SetBoolValue("Options", "ShowHidden", chbShowHiddenObjectsRA2.Checked);
+            game.SetBoolValue("Video", "Windowed", chbWindowedModeRA2.Checked);
+            game.SetBoolValue("Video", "UseGraphicsPatch", chbUseGraphicsPatchRA2.Checked);
+            game.SetBoolValue("Audio", "IsScoreRepeat", chbRepeatMusicRA2.Checked);
+            game.SetBoolValue("Audio", "IsScoreShuffle", chbShuffleMusicRA2.Checked);
 
-            RA2INI.WriteIni();
+            game.WriteIni();
         }
 
         private void HotkeyEditorDataGridRA2_KeyDown(object sender, KeyEventArgs e)

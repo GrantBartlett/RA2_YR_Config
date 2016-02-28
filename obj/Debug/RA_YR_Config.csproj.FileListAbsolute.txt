@@ -17,3 +17,21 @@ C:\Users\maikel\Desktop\RA_YR_Config\obj\Debug\RA2_YR_Config.exe
 C:\Users\maikel\Desktop\RA_YR_Config\obj\Debug\RA2_YR_Config.pdb
 C:\Users\maikel\Desktop\RA_YR_Config\obj\Debug\RA2_YR_Config.UpdaterForm.resources
 C:\Users\maikel\Desktop\RA_YR_Config\obj\Debug\RA_YR_Config.csprojResolveAssemblyReference.cache
+C:\Users\Grant\Desktop\RA2_YR_Config-master\bin\Debug\RA2_YR_Config.exe.config
+C:\Users\Grant\Desktop\RA2_YR_Config-master\obj\Debug\RA2_YR_Config.exe
+C:\Users\Grant\Desktop\RA2_YR_Config-master\obj\Debug\RA2_YR_Config.pdb
+C:\Users\Grant\Desktop\RA2_YR_Config-master\obj\Debug\RA_YR_Config.csprojResolveAssemblyReference.cache
+C:\Users\Grant\Desktop\RA2_YR_Config-master\obj\Debug\RA2_YR_Config.MainForm.resources
+C:\Users\Grant\Desktop\RA2_YR_Config-master\obj\Debug\RA2_YR_Config.Properties.Resources.resources
+C:\Users\Grant\Desktop\RA2_YR_Config-master\obj\Debug\RA_YR_Config.csproj.GenerateResource.Cache
+C:\Users\Grant\Desktop\RA2_YR_Config-master\bin\Debug\RA2_YR_Config.exe
+C:\Users\Grant\Desktop\RA2_YR_Config-master\bin\Debug\RA2_YR_Config.pdb
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\bin\Debug\RA2_YR_Config.exe.config
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\obj\Debug\RA2_YR_Config.exe
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\obj\Debug\RA2_YR_Config.pdb
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\bin\Debug\RA2_YR_Config.exe
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\bin\Debug\RA2_YR_Config.pdb
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\obj\Debug\RA_YR_Config.csprojResolveAssemblyReference.cache
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\obj\Debug\RA2_YR_Config.MainForm.resources
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\obj\Debug\RA2_YR_Config.Properties.Resources.resources
+C:\Users\Grant\Documents\Visual Studio 2013\Projects\cncnet\RA2_YR_Config_new\obj\Debug\RA_YR_Config.csproj.GenerateResource.Cache

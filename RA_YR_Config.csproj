@@ -41,21 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="7zip\Common\CommandLineParser.cs" />
-    <Compile Include="7zip\Common\CRC.cs" />
-    <Compile Include="7zip\Common\InBuffer.cs" />
-    <Compile Include="7zip\Common\OutBuffer.cs" />
-    <Compile Include="7zip\Compress\LZMA\LzmaBase.cs" />
-    <Compile Include="7zip\Compress\LZMA\LzmaDecoder.cs" />
-    <Compile Include="7zip\Compress\LZMA\LzmaEncoder.cs" />
-    <Compile Include="7zip\Compress\LZ\IMatchFinder.cs" />
-    <Compile Include="7zip\Compress\LZ\LzBinTree.cs" />
-    <Compile Include="7zip\Compress\LZ\LzInWindow.cs" />
-    <Compile Include="7zip\Compress\LZ\LzOutWindow.cs" />
-    <Compile Include="7zip\Compress\RangeCoder\RangeCoder.cs" />
-    <Compile Include="7zip\Compress\RangeCoder\RangeCoderBit.cs" />
-    <Compile Include="7zip\Compress\RangeCoder\RangeCoderBitTree.cs" />
-    <Compile Include="7zip\ICoder.cs" />
     <Compile Include="Files.cs" />
     <Compile Include="GameHotkeys.cs" />
     <Compile Include="MainForm.cs">
@@ -78,14 +63,6 @@
     <Compile Include="TWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Updater.cs" />
-    <Compile Include="UpdaterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdaterForm.designer.cs">
-      <DependentUpon>UpdaterForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,9 +70,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdaterForm.resx">
-      <DependentUpon>UpdaterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
